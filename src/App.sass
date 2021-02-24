@@ -1,0 +1,92 @@
+*
+  margin: 0
+  padding: 0
+  outline: none
+  list-style-type: none
+
+.menu
+  display: flex
+  justify-content: center
+  color: white
+
+  ul
+    display: flex
+    position: absolute
+    border-bottom: 1px solid #fff
+    width: 90%
+    justify-content: center
+    background-size: cover
+
+    li
+      margin: 20px
+      text-transform: uppercase
+
+.header_burger
+  display: none
+
+@media screen and (max-width: 520px)
+  .menu_block
+    width: 95px
+    height: 67px
+    display: flex
+    position: absolute
+    justify-content: center
+    align-items: center
+    z-index: 40
+  .mobile_menu
+    z-index: 50
+    display: flex
+    background-color: #ffffff
+    position: absolute
+    width: 40px
+    height: 3px
+    transition: 0.1s
+    align-items: center
+  .mobile_menu:after,
+  .mobile_menu:before
+    content: ""
+    background-color: #ffffff
+    position: absolute
+    width: 40px
+    height: 3px
+    bottom: 10px
+    transition: 0.3s
+  .mobile_menu:after
+    top: 10px
+  .mobile_menu.active:after
+    transform: rotate(45deg)
+    transition: 0.3s
+    top: -2px
+  .mobile_menu.active:before
+    transform: rotate(-45deg)
+    transition: 0.3s
+    bottom: 0
+  .mobile_menu.active
+    height: 0
+  .menu
+    transform: translateX(-100%)
+    transition: 0.3s all
+
+    ul
+      display: none
+  .menu.active
+    display: flex
+    justify-content: center
+    color: white
+    transform: translateX(0)
+    transition: 0.3s all
+
+    ul
+      display: flex
+      width: 100%
+      height: 100vh
+      flex-direction: column
+      justify-content: center
+      background-size: cover
+      background-color: #343344a3
+      text-align: center
+
+      li
+        margin: 20px
+        text-transform: uppercase
+        align-items: center

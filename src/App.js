@@ -1,11 +1,12 @@
 
-import './App.css';
-import {HeaderComponent} from "./components/HeaderComponent";
-import {FirstScreenComponent} from "./components/FirstScreenComponent";
-import AboutMeComponent from "./components/AboutMeComponent";
+import './App.sass';
+import {HeaderComponent} from "./components/Header/HeaderComponent";
+import {FirstScreenComponent} from "./components/FirsScreen/FirstScreenComponent";
+import AboutMeComponent from "./components/AboutMe/AboutMeComponent";
 
 function App() {
-  return (<div className="App">
+  return (
+      <div className="App">
         <HeaderComponent />
         <FirstScreenComponent />
         <AboutMeComponent />
